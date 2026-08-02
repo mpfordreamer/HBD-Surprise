@@ -31,15 +31,20 @@ function moveButton(e) {
     const yesButton = document.getElementById("yesButton");
     if (!noButton) return;
 
-    // Hitung area aman di dalam viewport (menghindari tombol keluar layar)
-    const padding = 20;
-    const maxX = window.innerWidth - noButton.offsetWidth - padding * 2;
-    const maxY = window.innerHeight - noButton.offsetHeight - padding * 2;
+    // Batasi pergerakan tombol HANYA di sekitar area kartu putih (.main-card)
+    const card = document.querySelector(".main-card") || document.body;
+    const cardRect = card.getBoundingClientRect();
+    const padding = 15;
 
-    const randomX = Math.max(padding, Math.floor(Math.random() * maxX));
-    const randomY = Math.max(padding, Math.floor(Math.random() * maxY));
+    const minX = Math.max(10, cardRect.left + padding);
+    const maxX = Math.max(minX, cardRect.right - noButton.offsetWidth - padding);
+    const minY = Math.max(10, cardRect.top + padding);
+    const maxY = Math.max(minY, cardRect.bottom - noButton.offsetHeight - padding);
 
-    // Pindahkan tombol secara instan
+    const randomX = minX + Math.floor(Math.random() * Math.max(10, maxX - minX));
+    const randomY = minY + Math.floor(Math.random() * Math.max(10, maxY - minY));
+
+    // Pindahkan tombol secara instan di dalam area putih
     noButton.style.position = "fixed";
     noButton.style.left = `${randomX}px`;
     noButton.style.top = `${randomY}px`;
