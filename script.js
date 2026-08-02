@@ -125,10 +125,10 @@ function createHeartShower() {
 function initAudio() {
     let isPlaying = false;
     let hasStartedOnce = false;
-    const START_TIME = 166; // Menit 2:46 = 166 detik
+    const START_TIME = 165; // Menit 2:45 = 165 detik
     const audio = new Audio("music/Nadhif Basalamah - penjaga hati.mp3");
 
-    // Pastikan pemutaran pertama dimulai dari menit 2:46 saat metadata lagu dimuat
+    // Pastikan pemutaran pertama dimulai dari menit 2:45 saat metadata lagu dimuat
     audio.addEventListener("loadedmetadata", () => {
         if (!hasStartedOnce) {
             audio.currentTime = START_TIME;
