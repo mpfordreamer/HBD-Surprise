@@ -43,11 +43,4 @@ The magic of this project lies in a small JavaScript function.
 
 ---
 
-### 👤 Connect with me:
 
-<p>
-  <a href="https://www.instagram.com/aditya_patil_0122/">Instagram</a>
-</p>
-<p>
-  <a href="https://www.linkedin.com/in/aditya-patil-497b3224b/"> My LinkedIn</a>
-</p>

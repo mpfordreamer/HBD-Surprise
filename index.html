@@ -1,47 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Komang Sinar Suriani Ayu Dalem Prabawaty</title>
+    <!-- Google Fonts untuk tipografi modern dan estetis -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Nunito:wght@700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-    <div class="container">
-        <div>
-            <h1 class="header_text">Do you wanna go out with me?</h1>
+    <!-- Latar belakang partikel cinta / dekorasi halus -->
+    <div class="bg-decoration"></div>
+
+    <div class="container main-card">
+        <div class="header-section">
+            <span class="badge-love">✨ Special Birthday Surprise ✨</span>
+            <h1 class="header_text">Happy Birthday<br><span class="name-highlight">Komang Sinar Suriani Ayu Dalem Prabawaty</span></h1>
+            <p class="question_text">Mau gak ngedate bareng akak??? 😋</p>
         </div>
-        <p>
-            <a href="https://www.instagram.com/aditya_patil___0122/">@aditya_patil___0122</a>
-        </p>
+
         <div class="gif_container">
-            <img src="https://i.postimg.cc/pdNqPxx1/milk-and-mocha-cute.gif" alt="Cute animated illustration" />
+            <img src="https://i.postimg.cc/pdNqPxx1/milk-and-mocha-cute.gif" alt="Ilustrasi Milk and Mocha beruang lucu" class="hero-gif" />
         </div>
+
         <div class="buttons">
-            <button class="btn" id="yesButton" onclick="nextPage()">Yes</button>
-            <button class="btn" id="noButton" onmouseover="moveButton()" onclick="moveButton()">
-          No
-        </button>
-
-            <script>
-                function nextPage() {
-                    window.location.href = "yes.html";
-                }
-
-                function moveButton() {
-                    var x =
-                        Math.random() *
-                        (window.innerWidth -
-                            document.getElementById("noButton").offsetWidth);
-                    var y =
-                        Math.random() *
-                        (window.innerHeight -
-                            document.getElementById("noButton").offsetHeight);
-                    document.getElementById("noButton").style.left = `${x}px`;
-                    document.getElementById("noButton").style.top = `${y}px`;
-                }
-            </script>
+            <button class="btn btn-yes" id="yesButton" onclick="nextPage()">Ya ❤️</button>
+            <button class="btn btn-no" id="noButton" onmouseover="moveButton(event)" ontouchstart="moveButton(event)" onclick="moveButton(event)">Tidak 😜</button>
         </div>
     </div>
+
+    <!-- Script modular luaran -->
+    <script src="script.js"></script>
 </body>
 
 </html>
